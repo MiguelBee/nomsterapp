@@ -84,5 +84,5 @@ test:
 production:
   <<: *default
   database: nomsterapp_production
-  username: nomsterapp
-  password: <%= ENV['NOMSTERAPP_DATABASE_PASSWORD'] %>
+  #username: nomsterapp
+  #password: <%= ENV['NOMSTERAPP_DATABASE_PASSWORD'] %>
