@@ -1,4 +1,5 @@
 @import "bootstrap";
+/*@import url('https://fonts.googleapis.com/css?family=Pangolin');*/
 
 .booyah-box {
   -moz-box-shadow: 1px 1px 2px 0 #d0d0d0;
@@ -19,10 +20,31 @@ h1 h2 h3 h4 h5 h6 {
 
 body {
   background: image_url('congruent_pentagon.png');
+  /* am thinking of just using plain color rather than texture background */
 }
 
 .navbar {
   background: image_url('tweed.png');
+  /* am thinking of just using plain color rather than texture background */
   box-shadow: 10px 10px 5px grey;
   font-family: "Segoe UI", Candara, "Bitstream Vera Sans", "DejaVu Sans", "Bitstream Vera Sans", "Trebuchet MS", Verdana, "Verdana Ref", sans-serif;
+}
+
+.navbar-brand {
+  color: #9E57C2;
+  /* color for font no appearing on navbar */
+  font-family: /*'Pangolin', cursive*/ 'kaushan_scriptregular';
+  font-weight: 600;
+  letter-spacing: -0.3px;
+  font-size: 30px;
+}
+
+@font-face {
+    font-family: 'kaushan_scriptregular';
+    src: font_url('kaushanscript-regular-webfont.woff2') format('woff2'),
+         font_url('kaushanscript-regular-webfont.woff') format('woff');
+
+    font-weight: normal;
+
+    font-style: normal;
 }
