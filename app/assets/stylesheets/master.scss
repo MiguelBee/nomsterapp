@@ -11,6 +11,7 @@
   margin-top: 10px;
   margin-bottom: 15px;
   padding: 20px;
+  
 }
 
 h1 h2 h3 h4 h5 h6 {
@@ -24,8 +25,8 @@ body {
 }
 
 .navbar {
-  background: image_url('tweed.png');
-  /* am thinking of just using plain color rather than texture background */
+
+  /* tried texture background, didn't like it, stayed with color */
   box-shadow: 10px 10px 5px grey;
   font-family: "Segoe UI", Candara, "Bitstream Vera Sans", "DejaVu Sans", "Bitstream Vera Sans", "Trebuchet MS", Verdana, "Verdana Ref", sans-serif;
 }
@@ -39,12 +40,3 @@ body {
   font-size: 30px;
 }
 
-@font-face {
-    font-family: 'kaushan_scriptregular';
-    src: font_url('kaushanscript-regular-webfont.woff2') format('woff2'),
-         font_url('kaushanscript-regular-webfont.woff') format('woff');
-
-    font-weight: normal;
-
-    font-style: normal;
-}
