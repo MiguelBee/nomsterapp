@@ -57,3 +57,5 @@ gem 'bootstrap', '~> 4.0.0.alpha6'
 gem 'will_paginate'
 
 gem 'simple_form'
+
+gem 'font-awesome-rails'
