@@ -31,7 +31,7 @@ class PlacesController < ApplicationController
     def update
         @place = Place.find(params[:id])
         
-        if current_user != current_user
+        if @place.user != current_user
          return render text: 'Not Allowed', status: :forbidden
         end
      
