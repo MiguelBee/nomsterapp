@@ -36,7 +36,7 @@
 </div>
 
 
-<div class="float-right offset-1">
+<div class="float-right offset-2">
     <% if current_user && current_user == @place.user %>
     <%= link_to 'Edit', edit_place_path(@place), class: 'btn btn-primary' %>
 
@@ -44,6 +44,14 @@
     <% end %>
 </div>
 <div class="clear"></div>
+
+<% @place.photos.each do |photo| %>
+<div class="booyah-box">
+	<%= photo.caption %>
+	<%= image_tag photo.picture, alt: photo.caption %>
+	  
+</div>
+<% end %>
 
 
 <!-- comment Modal -->
@@ -117,8 +125,10 @@
 <button type="button" class="float-right btn btn-primary btn-lg" data-toggle="modal" data-target="#myModalphoto">
   Add a Photo
 </button>
-</div>
+
 <div class="clear"></div>
+
+
 
 
 
