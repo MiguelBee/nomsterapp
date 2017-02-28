@@ -5,6 +5,7 @@
         <i><%= place.address %></i><br /><br />
             <p><%=place.description %></p><br />
         
+        
         <% if place.user.present? %>
             <small><%= place.user.email %></small>
         <% end %>
@@ -20,7 +21,13 @@
       </blockquote>
         </div>
 <% end %>
-    </div>
+<% if place.photos.present? %>
+<div class="booyah-box">
+    <%=place.photos.last.caption %>
+    <%= image_tag place.photos.last.picture, alt: place.photos.last.caption %>
+    <% end %>
+</div>
+</div>
 <% end %>
     
     <%= will_paginate @places %>

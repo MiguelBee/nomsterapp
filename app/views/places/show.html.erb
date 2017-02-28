@@ -39,7 +39,6 @@
 <div class="float-right offset-2">
     <% if current_user && current_user == @place.user %>
     <%= link_to 'Edit', edit_place_path(@place), class: 'btn btn-primary' %>
-
     <%= link_to 'Destroy', place_path(@place), method: :delete, data: {confirm: 'Are you sure?'}, class: 'btn btn-danger' %>
     <% end %>
 </div>
@@ -47,9 +46,8 @@
 
 <% @place.photos.each do |photo| %>
 <div class="booyah-box">
-	<%= photo.caption %>
-	<%= image_tag photo.picture, alt: photo.caption %>
-	  
+    <%= image_tag photo.picture %>
+	 	<%= photo.caption %>
 </div>
 <% end %>
 
