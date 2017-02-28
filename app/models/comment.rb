@@ -1,6 +1,8 @@
 class Comment < ApplicationRecord
     belongs_to :user
     belongs_to :place
+    after_create :send_comment_email
+    
     
     #validates :message, :length => {minumum: 10, maximum: 150}, presence: true
     #validates :RATINGS, presence: true
@@ -17,5 +19,8 @@ def humanized_rating
     RATINGS.invert[self.rating]
 end
 
+def send_comment_email
+    NotificationMailer.comment_added(self).deliver
+end
 
 end
