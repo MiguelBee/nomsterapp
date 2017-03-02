@@ -6,7 +6,7 @@
   </ol>
   <div class="carousel-inner" role="listbox">
     <div class="carousel-item active">
-      <%= image_tag"slider1.jpg.jpg" %>
+      <%= image_tag"slider1.jpg", class: "img-fluid" %>
           <div class="carousel-caption">
               This is the prettiest house
           </div>
@@ -54,11 +54,9 @@
 <% end %>
 <% if place.photos.present? %>
 <div class="booyah-box">
-    <div class="pic">
     <%=place.photos.last.caption %>
     <%= image_tag place.photos.last.picture, alt: place.photos.last.caption %>
     <% end %>
-    </div>
 </div>
 </div>
 <% end %>
