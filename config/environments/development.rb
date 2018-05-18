@@ -1,6 +1,7 @@
 Rails.application.configure do
-    config.action_mailer.delivery_method = :test
-
+  config.action_mailer.delivery_method = :test
+  #config.action_mailer.delivery_method = :stmp
+  
   #config.action_mailer.smtp_settings = {
    # address: "smtp.gmail.com",
     #port: 587,

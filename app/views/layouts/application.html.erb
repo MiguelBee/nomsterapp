@@ -17,7 +17,6 @@
       <%= link_to 'Nomster', root_path, class: 'navbar-brand' %>
 
       <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-        
         <ul class="navbar-nav mr-auto mt-2 mt-md-0">
          <li class="nav-item">
             <%= link_to new_place_path, class: 'nav-link' do %>
@@ -32,8 +31,13 @@
         <ul class="navbar-nav">
           <% if user_signed_in? %>
           <li class="nav-item">
-            <%= link_to 'My Profile', user_path(current_user), class: 'nav-link' %>
-            </li>
+            <%= link_to current_user.display_name, user_path(current_user), class: 'nav-link' %>
+          </li>
+          
+          <li class="nav-item">
+            <%= link_to current_place.name, place_path(current_place), class: 'nav-link' %>
+          </li>
+          
             
             <li class="nav-item">
             <%= link_to 'Sign Out', destroy_user_session_path, method: :delete, class: 'nav-link' %>

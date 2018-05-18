@@ -4,8 +4,8 @@ class Comment < ApplicationRecord
     after_create :send_comment_email
     
     
-    #validates :message, :length => {minumum: 10, maximum: 150}, presence: true
-    #validates :RATINGS, presence: true
+    validates :message, presence: true, length: {minumum: 10, maximum: 150}
+    validates :rating, presence: true
     
     RATINGS = {
     'one star': '1_star',
