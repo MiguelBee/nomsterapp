@@ -15,12 +15,12 @@ class Comment < ApplicationRecord
     'five stars': '5 stars'
     }
     
-def humanized_rating
-    RATINGS.invert[self.rating]
-end
-
-def send_comment_email
-    NotificationMailer.comment_added(self).deliver
-end
+    def humanized_rating
+        RATINGS.invert[self.rating]
+    end
+    
+    def send_comment_email
+        NotificationMailer.comment_added(self).deliver
+    end
 
 end

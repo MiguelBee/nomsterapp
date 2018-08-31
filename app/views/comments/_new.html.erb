@@ -1,0 +1,10 @@
+<%= simple_form_for Comment.new, url: place_comments_path(@place) do |f| %>  
+  <div class="modal-body">
+    <%= f.input :message %>
+    <%= f.input :rating, as: :select, collection: Comment::RATINGS %>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+    <%= f.submit "Add a Comment", class: 'btn btn-primary' %>
+  </div>
+<% end %>

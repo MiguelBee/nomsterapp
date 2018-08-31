@@ -1,9 +1,11 @@
-<h1> Send Us A Message</h1>
-
-<%=simple_form_for @contact do |f| %>
-<%= f.input :email %>
-<%= f.input :subject %>
-<%= f.input :message %>
-<br />
-<%= f.button :submit, 'Submit' %>
-<% end %>
+<div class="booyah-box">
+  <h1> Send Us A Message</h1>
+  
+  <%=simple_form_for @contact do |f| %>
+    <%= f.input :email %>
+    <%= f.input :subject %>
+    <%= f.input :message %>
+    <br />
+    <%= f.button :submit, 'Submit' %>
+  <% end %>
+</div>
